@@ -36,7 +36,7 @@ function App() {
 
 
       const res = await axios.post(
-        'http://localhost:4000/api/v2/file/',
+        'https://file-upload-backend-lkbs.onrender.com/api/v2/file',
         formData,
         {
           onUploadProgress: (progressEvent) => {
@@ -85,7 +85,7 @@ function App() {
 
           </Form.Group>
 
-          {progress > 0 &&  <ProgressBar now={progress} className='my-4' />}
+          {progress > 0 &&  <ProgressBar now={progress} label={`${progress}%`} className='my-4' />}
 
          
 
